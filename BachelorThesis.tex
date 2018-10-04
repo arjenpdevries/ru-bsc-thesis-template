@@ -1,0 +1,79 @@
+\documentclass[11pt,a4paper]{report}
+
+\usepackage{url}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage[all]{xy}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{todonotes}
+\usepackage{array}
+\usepackage{listings}
+\usepackage[a4paper]{geometry}
+\usepackage{float}
+
+\makeatletter %otherwise geometry resets everything
+\Gm@restore@org
+\makeatother
+
+\setlength{\itemsep}{0cm}
+\setlength{\voffset}{0cm}
+\setlength{\headheight}{0cm}
+\setlength{\topmargin}{0cm}
+\setlength{\extrarowheight}{3pt} %for superscripts in tabular
+\setlength{\arraycolsep}{4pt}
+\lstset{basicstyle = \footnotesize, breaklines = true}
+
+\graphicspath{{imgs/}}
+
+\begin{document}
+\begin{titlepage}
+\begin{center}
+\textsc{\LARGE Bachelor thesis\\Computer Science}\\[1.5cm]
+\includegraphics[height=100pt]{logo}
+
+\vspace{0.4cm}
+\textsc{\Large Radboud University}\\[1cm]
+\hrule
+\vspace{0.4cm}
+\textbf{\huge Thesis Title\\[0.3cm]
+\LARGE Subtitle if you like
+}\\[0.4cm]
+\hrule
+\vspace{2cm}
+\begin{minipage}[t]{0.45\textwidth}
+\begin{flushleft} \large
+\textit{Author:}\\
+Firstname Lastname\\
+sXXXXXX
+\end{flushleft}
+\end{minipage}
+\begin{minipage}[t]{0.45\textwidth}
+\begin{flushright} \large
+\textit{First supervisor/assessor:}\\
+Prof.dr.ir. Arjen P. de Vries\\
+\texttt{arjen@cs.ru.nl}\\[1.3cm]
+\textit{Second assessor:}\\
+Firstname Lastname\\
+\texttt{NAME@cs.ru.nl}
+\end{flushright}
+\end{minipage}
+\vfill
+{\large \today}
+\end{center}
+\end{titlepage}
+
+\input{abstract}
+\tableofcontents
+
+\input{introduction}
+\input{relatedwork}
+\input{conclusions}
+
+\bibliographystyle{alpha}
+\bibliography{bibliography}
+
+\appendix
+\input{appendix}
+
+\end{document}
