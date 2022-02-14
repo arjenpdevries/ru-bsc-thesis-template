@@ -9,11 +9,12 @@
 \usepackage{todonotes}
 \usepackage{array}
 \usepackage{listings}
-\usepackage[a4paper]{geometry}
+\usepackage{rutitlepage}
+\usepackage{geometry}
 \usepackage{float}
 
 \makeatletter %otherwise geometry resets everything
-\Gm@restore@org
+\Gm@restore@org%
 \makeatother
 
 \setlength{\itemsep}{0cm}
@@ -27,41 +28,16 @@
 \graphicspath{{imgs/}}
 
 \begin{document}
-\begin{titlepage}
-\begin{center}
-\textsc{\LARGE Bachelor thesis\\Computer Science}\\[1.5cm]
-\includegraphics[height=100pt]{logo}
-
-\vspace{0.4cm}
-\textsc{\Large Radboud University}\\[1cm]
-\hrule
-\vspace{0.4cm}
-\textbf{\huge Thesis Title\\[0.3cm]
-\LARGE Subtitle if you like
-}\\[0.4cm]
-\hrule
-\vspace{2cm}
-\begin{minipage}[t]{0.45\textwidth}
-\begin{flushleft} \large
-\textit{Author:}\\
-Firstname Lastname\\
-sXXXXXX
-\end{flushleft}
-\end{minipage}
-\begin{minipage}[t]{0.45\textwidth}
-\begin{flushright} \large
-\textit{First supervisor/assessor:}\\
-Prof.dr.ir. Arjen P. de Vries\\
-\texttt{arjen@cs.ru.nl}\\[1.3cm]
-\textit{Second assessor:}\\
-Firstname Lastname\\
-\texttt{NAME@cs.ru.nl}
-\end{flushright}
-\end{minipage}
-\vfill
-{\large \today}
-\end{center}
-\end{titlepage}
+\maketitleru[
+	authors={Firstname Lastname\\sXXXXXX},
+	date={\today},
+	others={%
+		{First supervisor/assessor:}{Prof.\ dr.\ ir.\ Arjen P.\ de Vries},
+		{Second assessor:}{Firstname Lastname}},
+	course={Bachelor's Thesis Computing Science},
+	title={Thesis Title},
+	subtitle={Subtitle if you like},
+]
 
 \input{abstract}
 \tableofcontents
